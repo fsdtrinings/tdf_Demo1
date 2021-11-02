@@ -1,3 +1,20 @@
+
+<button (click)="doLoadData()" > Load Data </button>
+<button (click)="doHideData()" > Hide Data </button>
+
+<div *ngIf="isData == true">
+    <table>
+        <tr *ngFor="let post of userPostArr">
+          <td> {{post.userId}} </td>
+          <td> {{post.id}} </td>
+          <td> {{post.title}} </td>
+          <td> {{post.body}} </td>
+        </tr>
+    </table>
+</div>
+<hr/>
+
+<div>
 <form (ngSubmit)="onSubmit(accountForm)" #accountForm="ngForm">
   <table>
     <tr>
@@ -44,3 +61,4 @@
 
   </table>
 </form>
+</div>
